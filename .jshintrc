@@ -1,0 +1,10 @@
+{
+	"node" : true,
+	"asi" : true,
+	"esnext": true,
+	"globals" : {
+		"__base" :true,
+		"requireLib" :true
+	}
+
+}

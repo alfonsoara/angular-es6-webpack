@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>{%= o.htmlWebpackPlugin.options.pkg.title %}</title>
+        <link rel="stylesheet" type="text/css" href="{%= o.htmlWebpackPlugin.options.pkg.urlDist.css %}">
+
+    </head>
+
+    <body ng-strict-di ng-app="demo">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div ui-view="header"></div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="container-home" ui-view="container"></div>
+          </div>
+        </div>
+        <div ui-view="footer"></div>
+      </div>
+
+        <script src="{%= o.htmlWebpackPlugin.options.pkg.urlDist.js %}"></script>
+    </body>
+
+
+    <!-- {%= o.htmlWebpackPlugin.options.pkg.name + ' v' + o.htmlWebpackPlugin.options.pkg.version + ' built on ' + new Date() %} -->
+
+</html>
