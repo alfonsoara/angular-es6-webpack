@@ -24,5 +24,11 @@ npm run-script devserver
 npm run-script build
 ```
 
+## Open url
+
+```
+http://localhost:9100/
+```
+
 
 More info: alfonsoara77@gmail.com
