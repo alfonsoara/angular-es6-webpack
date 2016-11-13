@@ -11,6 +11,7 @@ import angularUIRouter from 'angular-ui-router';
 // Bootstrap
 import bootstrapUI from 'angular-ui-bootstrap';
 // Our modules
+import LayoutConfig from './config/route';
 import layout from './modules/layout/layout.module';
 import home from './modules/home/home.module';
 
@@ -26,21 +27,4 @@ export const demoModule = angular.module('demo', [
     home
 ]);
 
-demoModule.config(($stateProvider, $urlRouterProvider) => {
-    $stateProvider.state('public', {
-        url: "/public",
-        abstract: true,
-        views: {
-            'header': {
-                templateUrl: require("./modules/layout/views/header.html"),
-                controller: "HeaderController as header"
-            },
-            'footer': {
-                templateUrl: require("./modules/layout/views/footer.html")
-            },
-            'contenedor': {
-                templateUrl: require("./modules/layout/views/container.html")
-            }
-        }
-    });
-});
+demoModule.config(LayoutConfig);
